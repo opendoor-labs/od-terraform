@@ -7,7 +7,7 @@ locals {
 }
 
 data "http" "team_org" {
-  url = "${var.api_endpoint}/v1/team_org/${local.team_encoded}"
+  url = "${var.serviceregistry_api}/v1/team_org/${local.team_encoded}"
 
   # The following attributes are exported: body (the raw body of the HTTP response)
 }

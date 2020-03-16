@@ -4,7 +4,7 @@ variable "team" {
   description = "Team to lookup in service registry {team.key}"
 }
 
-variable "api_endpoint" {
+variable "serviceregistry_api" {
   type        = string
   description = "The API endpoint for OD 'serviceregistry' service"
 }
