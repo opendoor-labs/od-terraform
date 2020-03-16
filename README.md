@@ -7,7 +7,7 @@ described [here](https://www.terraform.io/docs/modules/sources.html#github)
 
 ```
 module "ownership" {
-  source = "github.com/opendoor-labs/od-terraform/ownership"
+  source = "github.com/opendoor-labs/od-terraform/modules/ownership"
 }
 ```
 
