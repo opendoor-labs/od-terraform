@@ -1,0 +1,19 @@
+${jsonencode({
+    abort_incomplete_multipart_upload_days = 0
+    enabled = true
+
+    id     = "expire-and-delete-after-${days}-days"
+    prefix = "${prefix}"
+
+    expirations = [{
+      days                         = "${days}"
+      expired_object_delete_marker = false
+    }]
+
+    noncurrent_version_expirations = [{
+      days = "${noncurrent_days}"
+    }]
+
+    transitions                    = []
+    noncurrent_version_transitions = []
+})}
