@@ -19,3 +19,9 @@ as CI/CD (on-prem or cloud), local testing by developers via `terrafom plan` and
 The terraform modules stored in this public repo do not contain any Opendoor-specific
 secrets or other internal implementation details. All private data is simply passed
 via terraform variables.
+
+Example: how to use custom branch as module source (for testing):
+```
+module "s3_bucket" {
+  source = "git::https://github.com/opendoor-labs/od-terraform.git//modules/s3?ref=s3_module_grants"
+```

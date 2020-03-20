@@ -1,0 +1,20 @@
+${jsonencode({
+    abort_incomplete_multipart_upload_days = 0
+    enabled = true
+
+    id     = "S3 transition to ${tier}"
+    prefix = "${prefix}"
+
+    transitions = [{
+      days          = "${days}"
+      storage_class = "${tier}"
+    }]
+
+    noncurrent_version_transitions = [{
+      days          = "${days}"
+      storage_class = "${tier}"
+    }]
+
+    expirations                    = []
+    noncurrent_version_expirations = []
+})}
