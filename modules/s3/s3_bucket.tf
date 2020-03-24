@@ -38,6 +38,15 @@ resource "aws_s3_bucket" "s3_bucket" {
     }
   }
 
+  dynamic "website" {
+    for_each = var.website != null ? [var.website] : []
+
+    content {
+      index_document = website.value.index_document
+      error_document = website.value.error_document
+    }
+  }
+
   dynamic "versioning" {
     for_each = var.versioning != null ? [var.versioning] : []
 
