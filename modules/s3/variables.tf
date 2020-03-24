@@ -79,6 +79,16 @@ variable "cors_rules" {
   # https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#using-cors
 }
 
+variable "website" {
+  type = object({
+    index_document = string
+    error_document = string
+  })
+
+  description = "Settings to enable simple website hosting from S3 bucket"
+  default     = null
+}
+
 variable "versioning" {
   type = object({
     enabled    = bool
