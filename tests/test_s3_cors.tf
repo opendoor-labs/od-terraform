@@ -8,7 +8,8 @@ module "s3_test_bucket_cores" {
   cors_rules = [var.cors_get_any]
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-cors-rules"
 
   custom_tags = local.custom_tags
 }

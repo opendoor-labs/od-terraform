@@ -11,7 +11,8 @@ module "s3_test_bucket_website" {
   }
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-website"
 
   custom_tags = local.custom_tags
 }

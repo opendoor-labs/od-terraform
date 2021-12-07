@@ -6,7 +6,8 @@ module "s3_test_bucket_with_team" {
   region = var.region
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-with-team-tag"
 
   custom_tags = local.custom_tags
 }

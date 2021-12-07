@@ -17,7 +17,8 @@ module "s3_test_lifecycle" {
   ]
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-lifecycle"
 
   custom_tags = local.custom_tags
 }

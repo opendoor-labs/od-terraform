@@ -13,7 +13,8 @@ module "s3_test_logging" {
   }
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-logging"
 
   custom_tags = local.custom_tags
 }

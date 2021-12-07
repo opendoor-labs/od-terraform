@@ -11,7 +11,8 @@ module "s3_test_with_policy" {
   )
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-with-policy"
 
   custom_tags = local.custom_tags
 }
