@@ -8,7 +8,8 @@ module "s3_test_bucket_encryption" {
   server_side_encryption = "AES256"
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-encryption"
 
   custom_tags = local.custom_tags
 }

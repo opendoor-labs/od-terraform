@@ -6,7 +6,8 @@ module "s3_test_bucket_different_region" {
   region = "us-west-2"
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-different-region"
 
   custom_tags = local.custom_tags
 }

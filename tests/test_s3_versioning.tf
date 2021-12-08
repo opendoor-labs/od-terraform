@@ -8,7 +8,8 @@ module "s3_test_versioning" {
   versioning = var.versioning_enabled
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-versioning"
 
   custom_tags = local.custom_tags
 }

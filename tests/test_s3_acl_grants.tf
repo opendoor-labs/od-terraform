@@ -11,7 +11,8 @@ module "s3_test_acl_grants" {
   ]
 
   team = "cloud-infra"
-  env  = "staging"
+  env  = "development"
+  app  = "test-acl-grants"
 
   custom_tags = local.custom_tags
 }
