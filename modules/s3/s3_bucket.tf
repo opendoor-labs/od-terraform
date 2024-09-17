@@ -114,10 +114,8 @@ resource "aws_s3_bucket" "s3_bucket" {
       app = var.app
       env = var.env
 
-      # both team and org *must* have non-null values
-      team = coalesce(module.ownership.team, module.team_org.team)
-      org  = coalesce(module.ownership.org, module.team_org.org)
-
+      team = coalesce(module.ownership.team, module.team_org.team, "n/a")
+      org  = coalesce(module.ownership.org, module.team_org.org, "n/a")
     },
     var.custom_tags
   )
