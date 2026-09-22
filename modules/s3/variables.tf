@@ -3,6 +3,9 @@ variable "bucket" {
   description = "Name of S3 bucket"
 }
 
+# No longer wires into a provider config -- the module uses the caller's aws
+# provider, region included. Kept accepted so callers passing it do not error;
+# callers needing a non-default region must pass `providers = { aws = aws.<alias> }`.
 variable "region" {
   type        = string
   description = "AWS region to provision bucket at"
