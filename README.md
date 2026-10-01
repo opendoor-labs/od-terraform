@@ -11,6 +11,8 @@ module "ownership" {
 }
 ```
 
+`modules/canonical_tags` is the strict tag map (`org`, `team`, `service`, `env`, `managed-by`, `repo`). `modules/ownership` remains the older lookup that returns null when a key is missing.
+
 This repo is not designed to be "public" in its true sense.
 
 It simplifies access to terraform shared modules from different systems, such

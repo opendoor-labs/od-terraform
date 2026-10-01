@@ -8,3 +8,7 @@ The service registry API endpoint is passed as module's variable `serviceregistr
 
 Its outputs are the canonical team and org names for the given service,
 or null if it can't find them.
+
+For new resources, use `modules/canonical_tags`. That module returns the full
+tag map and fails the plan when the registry has no team or org. This module
+stays null-on-miss because `modules/s3` imports it without a version pin.
