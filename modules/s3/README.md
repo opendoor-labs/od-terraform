@@ -40,7 +40,7 @@ $
 $ rm -rf .terraform   ## to remove any cached modules as they may change drammaticaly
 $ terraform init
 $
-$ saml2aws login --skip-prompt -a od-eng
+$ aws sso login --profile od-eng
 $ export AWS_PROFILE=od-eng
 $
 $ terraform plan
